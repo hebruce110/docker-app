@@ -19,6 +19,9 @@ RUN apt-get update \
     #install Composer globally
     && curl -s -o /usr/local/bin/composer https://getcomposer.org/composer.phar \
     && chmod 0755 /usr/local/bin/composer \
+    # 增加 mongodb 扩展
+    && pecl install mongodb \
+    && docker-php-ext-enable mongodb \
     # gd扩展
     && docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/include/ \
     && docker-php-ext-install -j$(nproc) gd \
@@ -34,8 +37,8 @@ RUN apt-get update \
     # 增加 zip 扩展
     && apt-get install -y --no-install-recommends libzip-dev\
     && docker-php-ext-install -j$(nproc) zip \
-    # 增加 zip 扩展
-    && pecl install mongo \
-    && echo "extension=mongo.so" > /usr/local/etc/php/conf.d/ext-mongo.ini \
+    # 增加 git
+    && apt-get install git git-core -y \
     # 清理文件
+    && apt-get clean \
     && rm -r /var/lib/apt/lists/* \
