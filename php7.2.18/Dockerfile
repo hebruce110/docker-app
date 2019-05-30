@@ -1,7 +1,10 @@
 FROM php:7.2-fpm
-LABEL maintainer="bruce<heyuan110@gmail.com>" 
+
 LABEL version="1.0"
 LABEL Description="PHP FPM pp_cus_7.2.18"
+LABEL maintainer="bruce<heyuan110@gmail.com>" 
+LABEL dockerhub="https://hub.docker.com/u/heyuan110"
+LABEL github="https://github.com/heyuan110/docker-app"
 
 #redis version
 ENV  REDIS_VERSION=4.0.1
