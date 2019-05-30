@@ -23,10 +23,6 @@ RUN apt-get update && apt-get install -y \
     # redis 扩展
     && pecl install redis-${REDIS_VERSION} \
     && docker-php-ext-enable redis \
-    # 增加 mcrypt 扩展 
-    && apt-get install -y --no-install-recommends libmcrypt-dev \
-    && pecl install mcrypt-1.0.1 \
-    && docker-php-ext-enable mcrypt \
     # 1.0.8 增加 zip 扩展
     && apt-get install -y --no-install-recommends libzip-dev\
     && docker-php-ext-install -j$(nproc) zip \
