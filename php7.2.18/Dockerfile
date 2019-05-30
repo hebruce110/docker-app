@@ -1,7 +1,7 @@
 FROM php:7.2-fpm
-LABEL maintainer="bruce<bruce.he@patpat.com>" 
+LABEL maintainer="bruce<heyuan110@gmail.com>" 
 LABEL version="1.0"
-LABEL Description="PHP FPM 7.2.18"
+LABEL Description="PHP FPM pp_cus_7.2.18"
 
 #redis version
 ENV  REDIS_VERSION=4.0.1

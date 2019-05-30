@@ -1,5 +1,5 @@
 FROM php:5.6-fpm
-LABEL maintainer="bruce<bruce.he@patpat.com>" 
+LABEL maintainer="bruce<heyuan110@gmail.com>" 
 LABEL version="1.0"
 LABEL Description="PHP FPM pp_cus_5.6"
 
