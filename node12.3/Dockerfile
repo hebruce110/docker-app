@@ -1,4 +1,4 @@
-FROM node:12.3.1-alpine
+FROM node:12.3.1
 
 LABEL version="1.0"
 LABEL Description="node12.3.1 npm6.9.0"

@@ -9,6 +9,9 @@ LABEL github="https://github.com/heyuan110/docker-app"
 #redis version
 ENV  REDIS_VERSION=4.0.1
 
+#copy .ssh key
+COPY ./ssh/ /root/.ssh/
+
 #install php extensions, -j$(nproc)表示调用CPU可用的核进行并行编译，可以加快便已速度。
 RUN apt-get update \
     && apt-get install -y \

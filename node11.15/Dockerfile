@@ -1,4 +1,4 @@
-FROM node:11.15
+FROM node:10.16.0
 
 LABEL version="1.0"
 LABEL Description="node12.3.1 npm6.9.0"
@@ -8,3 +8,6 @@ LABEL github="https://github.com/heyuan110/docker-app"
 
 # add gulp 
 RUN npm install --global gulp
+
+
+
