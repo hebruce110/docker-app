@@ -1,16 +1,13 @@
 FROM php:7.2-fpm
 
 LABEL version="1.0"
-LABEL Description="PHP FPM pp_cus_7.2.18"
-LABEL maintainer="bruce<heyuan110@gmail.com>" 
-LABEL dockerhub="https://hub.docker.com/u/heyuan110"
-LABEL github="https://github.com/heyuan110/docker-app"
+LABEL description="PHP FPM pp_cus_7.2.18"
+LABEL editdate="2021/03/09 15:00:00 GTM+8"
+LABEL maintainer="bruce.he<bruce.he@patpat.com>" 
+LABEL dockerhub="AWS ECR"
 
 #redis version
 ENV  REDIS_VERSION=4.0.1
-
-#copy .ssh key
-COPY ./ssh/ /root/.ssh/
 
 #install php extensions, -j$(nproc)表示调用CPU可用的核进行并行编译，可以加快便已速度。
 RUN apt-get update \
@@ -19,11 +16,6 @@ RUN apt-get update \
         libjpeg62-turbo-dev \
         libpng-dev \
         libpng-dev \
-    #install Composer globally
-    && curl -s -o /usr/local/bin/composer https://getcomposer.org/composer.phar \
-    && chmod 0755 /usr/local/bin/composer \
-    # 增加 git
-    && apt-get install git git-core -y \
     # 增加 mongodb 扩展
     && pecl install mongodb \
     && docker-php-ext-enable mongodb \

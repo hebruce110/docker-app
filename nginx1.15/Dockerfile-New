@@ -1,0 +1,8 @@
+FROM nginx:1.15.12-alpine
+
+LABEL version="1.0"
+LABEL Description="nginx1.15.12"
+LABEL editdate="2021/03/09 15:00:00 GTM+8"
+LABEL maintainer="bruce.he<bruce.he@patpat.com>" 
+LABEL dockerhub="AWS ECR"
+
