@@ -3,7 +3,7 @@ FROM php:7.2-fpm
 LABEL version="1.0"
 LABEL description="PHP FPM pp_cus_7.2.18"
 LABEL editdate="2021/03/09 15:00:00 GTM+8"
-LABEL maintainer="bruce.he<bruce.he@patpat.com>" 
+LABEL maintainer="bruce<heyuan110@gmail.com>" 
 LABEL dockerhub="AWS ECR"
 
 #redis version
